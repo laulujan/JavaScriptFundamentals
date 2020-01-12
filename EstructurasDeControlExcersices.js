@@ -1,7 +1,16 @@
 // Landscape or Portrait
-function isLandScape (width, height) {
+let width = 0;
+let height = 0;
 
+function isLandsCape(width, height){
+    if (width > height) {
+        console.log("is landscape")
+    }else{
+        (console.log("is portrait"))
+    }
 }
+
+isLandsCape(200,50);
 
 // FizzBuzz algoritmo
 /**
@@ -13,6 +22,39 @@ function isLandScape (width, height) {
  * 
  */
 
+ function fizzBuzz(numero){
+    let num = prompt("ingresa un numero");
+    if (num%3 ===0 && num%5 === 0){
+        alert("FizzBuzz");
+    }else if (num %3 === 0){
+        alert ("Fizz");
+    }else if (num %5 === 0){
+        alert ("Buzz");
+    } else if ( typeof(num) !== "number"){
+        alert ("not a number");
+    } else {
+        alert("input");
+    }
+ }
+ fizzBuzz();
+
+ //*************CORRECT********************
+ function fizzBuzz(num){
+    if (num%3 ===0 && num%5 === 0){
+        alert("FizzBuzz");
+    }else if (num %3 === 0){
+        alert ("Fizz");
+    }else if (num %5 === 0){
+        alert ("Buzz");
+    } else if ( typeof(num) !== "number"){
+        alert ("not a number");
+    } else {
+        alert("input");
+    }
+ }
+ fizzBuzz(7);
+//************************************************** */
+
  // limite de velocidad
  /**
   * Limite de velocidad = 70
@@ -20,6 +62,22 @@ function isLandScape (width, height) {
   * Math.Floor
   * 12 point -> licencia suspendida
   */
+function speedLimit (speed){
+    if(speed <= 70){
+        console.log("ok");
+        return;
+    }
+
+    let x = Math.floor((speed-70)/5);
+    console.log("you got ", x ," points");
+
+    if (x >= 12) {
+        console.log("licencia suspendida")
+    }
+
+}
+speedLimit(200);
+
 
   // Par or non
   /**
@@ -32,6 +90,15 @@ function isLandScape (width, height) {
    * 3 non
    */
 
+   function isOdd (n){
+       if(n % 2 === 0){
+           console.log("this number is even");
+       }else{
+           console.log("this numer is odd")
+       }
+   }
+   isOdd(21);
+
    // Suma de multiplos de 3  y 5
    /**
     *  sum(10)
@@ -39,6 +106,18 @@ function isLandScape (width, height) {
     *  5 -> 5, 10
     *  sum(10) = 33
     */
+
+    var suma = 0;
+
+    function sumaMultiplos (num) {
+        for (let i = 1; i<=num; i++) {
+            if(( i % 3 === 0)||(i % 5 === 0)){
+                suma += i;
+            }
+        }
+        console.log(suma);
+    }
+    sumaMultiplos(10);
 
     // Show the stars
 
