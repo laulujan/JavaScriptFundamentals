@@ -40,14 +40,14 @@ isLandsCape(200,50);
 
  //*************CORRECT********************
  function fizzBuzz(num){
-    if (num%3 ===0 && num%5 === 0){
+    if  ( typeof(num) !== "number"){
+        alert ("not a number");
+    } else if (num%3 ===0 && num%5 === 0){
         alert("FizzBuzz");
     }else if (num %3 === 0){
         alert ("Fizz");
     }else if (num %5 === 0){
         alert ("Buzz");
-    } else if ( typeof(num) !== "number"){
-        alert ("not a number");
     } else {
         alert("input");
     }
@@ -122,5 +122,27 @@ speedLimit(200);
     // Show the stars
 
     // Print Primes  
+    // El de los imprimir los números consiste en una función que recibe un número como parámetro 
+    // y te imprime todos los números primos que existen dentro de ese número.
+
+    function primeNumbers(num){
+        for (let i = 1; i < num; i++){
+            //declaro una variable para saber si el numero a comparar solo es divisible entre el mismo y 1
+            let divisible = 0;
+           for (let j = 1; j < num; j++){ 
+            if (i % j == 0){
+                //si el numero es divisible entre 1 y algun otro numero se suma a variable divisible
+                divisible++;
+            } 
+           }
+           // me quedo con los numeros que solo son divisibles entre dos numeros
+           if (divisible === 2){
+            console.log(i);
+           } 
+        } 
+    }
+    primeNumbers(10);
+
+
 
  
